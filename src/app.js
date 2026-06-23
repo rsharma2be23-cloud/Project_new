@@ -43,6 +43,13 @@ app.patch('/notes/:index',(req,res)=>{
   })
 
 })
+app.delete('/notes/:index',(req,res)=>{
+  const Index=req.params.index
+  delete notes[Index]// perfroms deletion
+  res.status(200).json({
+    message:"note has been deleted"
+  })
+})
 
 
 
