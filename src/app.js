@@ -43,17 +43,7 @@ app.patch('/notes/:index',(req,res)=>{
   })
 
 })
-app.patch('/notes/:index',(req,res)=>{
-  const Index=req.params.index
-  const description=req.body.description // new desc
-  const title=req.body.title// new title
-  notes[Index].description=description//replace old desc with new updated desc 
-  notes[Index].title=title
-  res.status(200).json({
-    message: "note updated succesfully"
-  })
 
-})
 
 
 module.exports=app
